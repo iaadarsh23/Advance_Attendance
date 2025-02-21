@@ -1,9 +1,9 @@
 import React from 'react'
-
+import Admin from './components/Admin'
 const App = () => {
   return (
     <div>
-      <h1 className='bg-red-70'>Hello</h1>
+      <Admin />
     </div>
   )
 }
