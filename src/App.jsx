@@ -1,11 +1,7 @@
-import React from 'react'
-import Admin from './pages/Admin'
+import React from "react";
+import Admin from "./pages/Admin";
 const App = () => {
-  return (
-	<div>
-		<Admin /> 
-	</div>
-  )
-}
+	return <Admin />;
+};
 
-export default App
+export default App;
