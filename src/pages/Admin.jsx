@@ -1,5 +1,6 @@
 import React from "react";
 import { Calendar, MapPin, QrCode, Clock } from "lucide-react";
+import FeatureButton from "../components/button";
 
 const Admin = () => {
 	const lectures = [
@@ -22,12 +23,16 @@ const Admin = () => {
 	return (
 		<div>
 			{/* header */}
-			<div classname="min-h-screen bg-gray-600">
+			<div classname="min-h-screen bg-gray-600 flex justify-between">
 				<header className="bg-indigo-700 w-screen h-28 p-5">
 					<h1 className="text-white text-3xl font-bold">Teacher's Dashboard</h1>
 					<p className="text-white font-bold text-md mt-2">
 						Welcome back, Ayush
 					</p>
+					<div className="flex gap-4">
+						<FeatureButton name="Login" />
+						<FeatureButton name="Sign-Up" />
+					</div>
 				</header>
 				{/* main section */}
 				<main className="max-w-7xl mx-auto p-6">
