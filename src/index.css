@@ -1,1 +1,48 @@
 @import "tailwindcss";
+
+:root {
+	--radial-gradient-background: 250, 250, 250;
+	--solid-color-background: 255, 255, 255;
+	--overlay-color: 0, 0, 0; /* Black color for overlay */
+	--primary-color: 59, 130, 246; /* Blue tone matching the dashboard */
+}
+
+.radial-gradient {
+	background: radial-gradient(
+			circle at 50% 0%,
+			rgba(var(--radial-gradient-background), 0.1) 0%,
+			transparent 60%
+		),
+		rgb(0, 0, 0);
+	border: 2px solid rgba(var(--primary-color), 0.6);
+	transition: all 0.3s ease-in-out;
+}
+
+.linear-mask {
+	mask-image: linear-gradient(
+		-75deg,
+		black calc(var(--x) + 20%),
+		transparent calc(var(--x) + 30%),
+		black calc(var(--x) + 100%)
+	);
+	-webkit-mask-image: linear-gradient(
+		-75deg,
+		black calc(var(--x) + 20%),
+		transparent calc(var(--x) + 30%),
+		black calc(var(--x) + 100%)
+	);
+}
+
+.linear-overlay {
+	background-image: linear-gradient(
+		-75deg,
+		rgba(var(--overlay-color), 0.2) calc(var(--x) + 20%),
+		rgba(var(--overlay-color), 0.6) calc(var(--x) + 25%),
+		rgba(var(--overlay-color), 0.2) calc(var(--x) + 100%)
+	);
+	mask: linear-gradient(black, black) content-box, linear-gradient(black, black);
+	-webkit-mask: linear-gradient(black, black) content-box,
+		linear-gradient(black, black);
+	mask-composite: exclude;
+	-webkit-mask-composite: xor;
+}

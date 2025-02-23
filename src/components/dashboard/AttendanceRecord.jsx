@@ -1,5 +1,3 @@
-import { data } from "autoprefixer";
-import { Key } from "lucide-react";
 import { useState } from "react";
 
 export default function AttendanceRecord() {

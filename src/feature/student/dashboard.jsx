@@ -2,12 +2,16 @@ import Card from "../../components/dashboard/Card";
 import RealCalendar from "react-calendar";
 import { Calendar, CheckCircle, Clock, CircleUser } from "lucide-react";
 import AttendanceRecord from "../../components/dashboard/AttendanceRecord";
+import FeatureButton from "../../components/button";
 export default function StudentDashboard() {
 	return (
 		<>
 			<header className="bg-gradient-to-r from-blue-500 to-purple-600 text-white w-full p-4 px-8 flex justify-between items-center shadow-xl border-b-2 border-gray-600">
 				<h1 className="text-3xl font-bold">Student's Dashboard</h1>
-				<CircleUser className="w-8 h-8 text-gray-300" />
+				<div className="flex gap-4">
+					<CircleUser className="w-8 h-8 text-gray-300" />
+					<FeatureButton name="Log Out" />
+				</div>
 			</header>
 			<main className="w-screen p-6">
 				{/* Stats Cards */}
