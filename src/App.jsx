@@ -5,7 +5,7 @@ const App = () => {
 	return (
 		<>
 			<StudentPannel />
-			<Admin />;
+			{/* <Admin />; */}
 		</>
 	);
 };
